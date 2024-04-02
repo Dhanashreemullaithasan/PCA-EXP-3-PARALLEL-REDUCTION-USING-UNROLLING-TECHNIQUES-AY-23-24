@@ -1,9 +1,9 @@
 # PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES AY 23-24
-<h3>AIM:</h3>
-<h3>ENTER YOUR NAME</h3>
-<h3>ENTER YOUR REGISTER NO</h3>
-<h3>EX. NO</h3>
-<h3>DATE</h3>
+<h3>DATE:</h3>
+<h3>ENTER YOUR NAME :</h3> DHANASHREE M 
+<h3>ENTER YOUR REGISTER NO :</h3> 212221230018
+<h3>EX.NO:</h3>3
+
 <h1> <align=center> PARALLEL REDUCTION USING UNROLLING TECHNIQUES </h3>
   Refer to the kernel reduceUnrolling8 and implement the kernel reduceUnrolling16, in which each thread handles 16 data blocks. Compare kernel performance with reduceUnrolling8 and use the proper metrics and events with nvprof to explain any difference in performance.</h3>
 
@@ -54,7 +54,7 @@ Memory Deallocation
 !pip install git+https://github.com/andreinechaev/nvcc4jupyter.git
 %load_ext nvcc4jupyter
 ```
-
+### Unrolling8
 ```
 %%cuda
 #include <sys/time.h>
@@ -276,6 +276,7 @@ __global__ void reduceUnrolling16(int *g_idata, int *g_odata, unsigned int n)
 }
 
 ```
+### Unrolling16
 ```
 %%cuda
 #include <sys/time.h>
@@ -491,8 +492,10 @@ __global__ void reduceUnrolling16(int *g_idata, int *g_odata, unsigned int n)
 
 ```
 ## OUTPUT:
+### Unrolling8
 ![Screenshot 2024-03-27 115036](https://github.com/Dhanashreemullaithasan/PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES-AY-23-24/assets/94165415/199e06a4-d0fd-4c55-b168-c203486684e1)
 
+### Unrolling16
 ![Screenshot 2024-03-27 115229](https://github.com/Dhanashreemullaithasan/PCA-EXP-3-PARALLEL-REDUCTION-USING-UNROLLING-TECHNIQUES-AY-23-24/assets/94165415/37b6856c-0ce8-4649-8a46-5e4cdf4c1543)
 
 ## RESULT:
